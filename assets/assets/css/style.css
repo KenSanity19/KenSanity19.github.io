@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/* This is the header part */
+header {
+    background: black;
+}
+.container {
+    width: 1723px;
+    margin: 0 auto;
+}
+
+/* logo sources*/
+.logo-container {
+    display: inline-block;
+    margin-top: -75px;
+}
+.logo-container img {
+    width: 105px;
+    height: 10vh;
+    margin-top: 68px;
+    padding-left: 206px;
+}
+
+/*navigation bar*/ 
+.nav-container {
+    float: right;
+    margin-top: -22px;
+    padding-right: 235px;
+}
+nav.header-navigation {
+    margin-top: 50px;
+}
+nav.header-navigation a {
+    font-size: 20px;
+    text-decoration: none;
+    margin: 25px;
+    font-variant: all-small-caps;
+    color: aliceblue;
+}
+nav.header-navigation a:hover {
+    color: red;
+    font-weight: bolder;
+}
+/*banner section */
+h1 {
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    padding-top: 75px;
+    padding-right: 550px;
+} 
+.banner-section {
+    background-repeat: no-repeat;
+    height: 90vh;
+    background: url(https://scontent-hkt1-1.xx.fbcdn.net/v/t1.15752-9/321768114_894623544919720_6591357244903194062_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeFZaMJamU5wJRCSYAW7rMYn0vL3Lhx1IjfS8vcuHHUiN8FvRt4OCTx9g-SPcRrVfE4L05u3-XFPm9uWwhU7BGRy&_nc_ohc=22119EQGXhUAX-5v_Au&tn=e67qJ3nKXSZ7XrSL&_nc_ht=scontent-hkt1-1.xx&oh=03_AdRbzWCvMAQHdnsz2-TRZ-1ZeMSY69Y9dZZveW_-NwGNew&oe=63DA5334);
+}
+.banner {
+    text-align: left;
+    margin-left: 210px;
+}
+p {
+    margin-bottom: 15px;
+}
+p#paragraph1 {
+    font-size: 40px;
+    padding-top: 30px;
+    color: white;
+    font-variant: petite-caps;
+} 
+strong {
+    color: cornflowerblue;
+}
+p#paragraph2 {
+    font-size: 20px;
+    padding-bottom: 115px;
+    color: #bd1717;
+} 
+p.paragraph3 {
+    text-align: left;
+    margin-left: 344px;
+}
+p {
+    margin-bottom: 15px;
+    color: white;
+    text-align: left;
+    font-family: monospace;
+    font-size: 16px;
+    margin-left: 344px;
+}
+/* Navigation */
+.nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 2.75rem;
+    overflow-y: hidden;
+  }
+
+.nav-scroller .nav {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+/*logo sources*/
+.col {
+    color: white;
+    margin-left: 344px;
+    font-size: 30px;
+    padding-top: 30px;
+}
+::before {
+    margin-right: 18px;
+    color: white;
+}
+/* FOOTER */
+p#footer {
+    margin-top: 110px;
+}

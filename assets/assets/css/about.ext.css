@@ -33,7 +33,6 @@ p.lead1 {
     font-family: system-ui;
     font-size: 18px;
     font-weight: 300;
-    font-family: cursive;
 }
 .text-muted {
     --bs-text-opacity: 1;
@@ -45,7 +44,6 @@ p.lead2 {
     font-family: system-ui;
     font-size: 18px;
     font-weight: 300;
-    font-family: cursive;
 }
 span.text-mutes {
     color: #0363c1;

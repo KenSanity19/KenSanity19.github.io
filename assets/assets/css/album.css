@@ -67,10 +67,6 @@ main {
 footer.text-muted.py-5 {
   background-color: #212529;
 }
-/*texts*/
-p.card-text {
-  font-family: cursive;
-}
 /* video */
 video {
   width: 419px;

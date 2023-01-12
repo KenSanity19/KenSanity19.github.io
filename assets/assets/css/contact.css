@@ -40,6 +40,12 @@ body {
 header {
   background: #141212;
 }
+div#navbarCollapse {
+  background-color: #212529;
+}
+button.navbar-toggler {
+  background-color: #212529;
+}
 nav.navbar.navbar-expand-md.navbar-dark.fixed-top.bg-dark {
   height: 69px;
 }

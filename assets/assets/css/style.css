@@ -9,6 +9,7 @@ header {
 .container {
     width: 1723px;
     margin: 0 auto;
+    background-color: black;
 }
 
 /* logo sources*/

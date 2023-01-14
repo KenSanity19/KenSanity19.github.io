@@ -2,7 +2,9 @@ body {
   color:white;
 }
 main {
-  background-color: #141212;
+  background: url(https://scontent.fmnl25-4.fna.fbcdn.net/v/t1.15752-9/323997009_574363217466853_7515564938583242658_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeHiwdXp0w5iYkljRf5OUt7ZZjPijeKTYVtmM-KN4pNhWxaDdl8wvRq244GM3tzmZuKEbv4aF_t6JSO22_Xwu72h&_nc_ohc=vEEluyp70QAAX_f30HN&_nc_ht=scontent.fmnl25-4.fna&oh=03_AdQaM_ujphL9zw6K7rUPeB8XiAst73qvxuWGcae6pbrl_g&oe=63EA2FCF);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 h1 {
   color: red;
@@ -120,6 +122,10 @@ a.nav-link.active:hover {
 header {
   background: #141212;
 }
+h2.header {
+  color: rgb(209 57 57);
+  font-family: serif;
+}
 div#navbarCollapse {
   background-color: #212529;
 }
@@ -161,7 +167,8 @@ h2.fw-normal {
   font-family: auto;
 }
 p {
-  color: white;
+  color: rgb(255 255 255);
+  font-size: 20px;
 }
 /* FOOTER */
 ::before {

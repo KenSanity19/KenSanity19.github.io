@@ -56,12 +56,23 @@ h1.fw-light {
     font-variant-caps: petite-caps;
 }
 .text-muted {
-    --bs-text-opacity: 1;
-    color: rgb(255 255 255 / 75%)!important;
+  --bs-text-opacity: 1;
+  color: rgb(4 4 4) !important;
+  font-weight: 600;
+}
+.row.py-lg-5 {
+  background: url(https://img.freepik.com/free-vector/watercolor-background_220290-15.jpg?w=2000);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 /*Main-container*/
 main {
     background-color: #121212;
+}
+.album.py-5.bg-light {
+    background: url(https://scontent.fmnl25-4.fna.fbcdn.net/v/t1.15752-9/323997009_574363217466853_7515564938583242658_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeHiwdXp0w5iYkljRf5OUt7ZZjPijeKTYVtmM-KN4pNhWxaDdl8wvRq244GM3tzmZuKEbv4aF_t6JSO22_Xwu72h&_nc_ohc=vEEluyp70QAAX_f30HN&_nc_ht=scontent.fmnl25-4.fna&oh=03_AdQaM_ujphL9zw6K7rUPeB8XiAst73qvxuWGcae6pbrl_g&oe=63EA2FCF);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 /*Footer*/
 footer.text-muted.py-5 {

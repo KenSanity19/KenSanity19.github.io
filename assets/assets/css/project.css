@@ -107,3 +107,19 @@ h1.display-4.fw-normal {
     color: white;
     font-variant: all-small-caps;
 }
+/* FOOTER */
+p#footer {
+  color: white;
+}
+footer.container {
+  margin-top: 20%;
+}
+::before {
+  color: aliceblue;
+  font-size: 32px;
+}
+a {
+  color: rgba(var(--bs-link-color-rgb),var(--bs-link-opacity,1));
+  text-decoration: underline;
+  font-weight: 700;
+}

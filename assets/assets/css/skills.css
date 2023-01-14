@@ -103,6 +103,33 @@ p {
 h3.pt-5.mt-5.mb-4.display-6.lh-1.fw-bold {
   color: crimson;
 }
+/* Progress Bar */
+section {
+  height: 45%;
+  background: #0d141b;
+}
+h1 {
+  color: red;
+  text-align: center;
+}
+.info {
+  color: whitesmoke;
+  font-size: 30px;
+  margin-left: 25%;
+}
+progress#file {
+  width: 50%;
+}
+.w3-light-grey {
+  background-color: white;
+  width: 50%;
+  border-radius: 20vh;
+  margin-left: 25%;
+}
+.w3-grey {
+  background-color: red;
+  border-radius: 20px;
+}
 /* FOOTER */
 ::before {
   font-size: 35px;
@@ -111,4 +138,7 @@ h3.pt-5.mt-5.mb-4.display-6.lh-1.fw-bold {
 p#footer {
   background-color: #141212;
   color: white;
+}
+p.float-end {
+  background-color: #141212;
 }

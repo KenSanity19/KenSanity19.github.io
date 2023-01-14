@@ -1,5 +1,8 @@
 main {
-  background: url(https://images7.alphacoders.com/979/979702.png);
+  background: url(https://c4.wallpaperflare.com/wallpaper/480/377/226/dota-2-defense-of-the-ancients-steam-software-dota-wallpaper-preview.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .b-example-divider {
   background-color: #212529;
@@ -109,7 +112,7 @@ section {
   background: #0d141b;
 }
 h1 {
-  color: red;
+  color: #dc143c;
   text-align: center;
 }
 .info {

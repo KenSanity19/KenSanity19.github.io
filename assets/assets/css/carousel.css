@@ -2,9 +2,10 @@ body {
   color:white;
 }
 main {
-  background: url(https://scontent.fmnl25-4.fna.fbcdn.net/v/t1.15752-9/323997009_574363217466853_7515564938583242658_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeHiwdXp0w5iYkljRf5OUt7ZZjPijeKTYVtmM-KN4pNhWxaDdl8wvRq244GM3tzmZuKEbv4aF_t6JSO22_Xwu72h&_nc_ohc=vEEluyp70QAAX_f30HN&_nc_ht=scontent.fmnl25-4.fna&oh=03_AdQaM_ujphL9zw6K7rUPeB8XiAst73qvxuWGcae6pbrl_g&oe=63EA2FCF);
+  background: url(https://scontent.fmnl8-2.fna.fbcdn.net/v/t1.15752-9/322762165_896480791699786_3312874799366609417_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=ae9488&_nc_eui2=AeFiX4KaJcXB34a9d8r3_0M-yoC3J7GmIDPKgLcnsaYgM1QFfDH2OmYsf9469YF22-olvy1tbDPUlRDPNQR-8qHh&_nc_ohc=8DVRp0vk9XgAX8EDnsf&tn=WJ_JTiEIf41TumMd&_nc_ht=scontent.fmnl8-2.fna&oh=03_AdSM5ZU0_J1h1T_8tGiRFaHjjJa8KoiMktvjxTvkPqesaw&oe=63EA4650);
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
 h1 {
   color: red;

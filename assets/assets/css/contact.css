@@ -76,6 +76,7 @@ div#modalSignin {
   background-repeat: no-repeat;
   height: 120vh;
   margin-top: 55px;
+  background-attachment: fixed;
 }
 /* Texts */
 p {

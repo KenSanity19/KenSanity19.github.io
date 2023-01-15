@@ -93,7 +93,7 @@ body {
     background-attachment: fixed;
 }
 video {
-    width: 378px;
+  width: 100%;
 }
 .card-body {
     background-color: #c4cbde;

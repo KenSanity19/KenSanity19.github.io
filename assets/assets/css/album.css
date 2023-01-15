@@ -81,7 +81,7 @@ footer.text-muted.py-5 {
 }
 /* video */
 video {
-  width: 419px;
+  width: 100%;
 }
 .card-body {
   flex: 1 1 auto;

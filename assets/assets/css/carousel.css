@@ -7,11 +7,6 @@ main {
   background-size: cover;
   background-attachment: fixed;
 }
-h1 {
-  color: red;
-  font-variant: all-small-caps;
-}
-
 /* Carousel base class */
 .carousel {
   margin-bottom: 4rem;
@@ -71,7 +66,14 @@ a:hover {
   -moz-user-select: none;
   user-select: none;
 }
-
+@keyframes fadeinLeft {
+  from{
+      transform: translate(-100%);
+      opacity: 0;
+  }to{
+      opacity: 1;
+  }
+}
 @media (min-width: 768px) {
   .bd-placeholder-img-lg {
     font-size: 3.5rem;
@@ -123,6 +125,11 @@ a.nav-link.active:hover {
 header {
   background: #141212;
 }
+h1 {
+  color: #ad1717;
+  font-variant: all-small-caps;
+  animation: fadeinLeft 1s;
+}
 h2.header {
   color: rgb(209 57 57);
   font-family: serif;
@@ -160,7 +167,7 @@ a.nav-link.active {
 /* body */
 .text-muted {
   --bs-text-opacity: 1;
-  color: rgb(23 139 255 / 75%)!important;
+  color: rgb(209 54 50)!important;
   font-family: auto;
 }
 h2.fw-normal {
@@ -171,7 +178,17 @@ p {
   color: rgb(255 255 255);
   font-size: 20px;
 }
+p#paragraphs {
+  font-size: 150%;
+  animation: fadeinLeft 1s;
+}
+.lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+  font-family: math;
+}
 /* FOOTER */
 ::before {
   font-size: 35px;
 }
+

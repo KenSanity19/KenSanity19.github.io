@@ -35,6 +35,7 @@ body {
 }
 .modal-content.rounded-4.shadow {
   background-color: bisque;
+  animation: fadeinLeft 1s;
 }
 /* header part style CSS */
 header {
@@ -91,4 +92,12 @@ p#footer {
   background-color: #141212;
   color: white;
   margin-left: 0px;
+}
+@keyframes fadeinLeft {
+  from{
+      transform: translate(-100%);
+      opacity: 0;
+  }to{
+      opacity: 1;
+  }
 }

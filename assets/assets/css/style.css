@@ -51,6 +51,7 @@ h1 {
     color: white;
     padding-top: 75px;
     padding-right: 550px;
+    animation: fadeinLeft 1s ease; 
 } 
 .banner-section {
     background-repeat: no-repeat;
@@ -69,6 +70,7 @@ p#paragraph1 {
     padding-top: 30px;
     color: white;
     font-variant: petite-caps;
+    animation: fadeinLeft 1s ease; 
 } 
 strong {
     color: cornflowerblue;
@@ -77,6 +79,7 @@ p#paragraph2 {
     font-size: 20px;
     padding-bottom: 115px;
     color: #bd1717;
+    animation: fadeinLeft 1s ease; 
 } 
 p.paragraph3 {
     text-align: left;
@@ -122,4 +125,12 @@ p {
 /* FOOTER */
 p#footer {
     margin-top: 110px;
+}
+@keyframes fadeinLeft {
+    from{
+        transform: translate(-100%);
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
 }

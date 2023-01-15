@@ -28,22 +28,24 @@ h2.featurette-heading.fw-normal.lh-1 {
     color: firebrick;
 }
 p.lead1 {
-    color: white;
-    margin-left: 50px;
-    font-family: system-ui;
-    font-size: 18px;
-    font-weight: 300;
+  color: white;
+  margin-left: 50px;
+  font-size: 20px;
+  font-weight: 300;
+  font-family: math;
+  animation: fadeinUp 2s;
 }
 .text-muted {
     --bs-text-opacity: 1;
     color: rgb(0 128 255 / 75%)!important;
 }
 p.lead2 {
-    color: white;
-    margin-left: 37px;
-    font-family: system-ui;
-    font-size: 18px;
-    font-weight: 300;
+  color: white;
+  margin-left: 37px;
+  font-size: 20px;
+  font-weight: 300;
+  font-family: math;
+  animation: fadeinUp 2s;
 }
 span.text-mutes {
     color: #0363c1;
@@ -87,4 +89,12 @@ a.btn.btn-lg.btn-primary {
   .bi {
     vertical-align: -.125em;
     fill: currentColor;
+  }
+  @keyframes fadeinUp{
+    from{
+      transition-property: translate(-50%);
+      opacity: 0;
+    }to{
+      opacity: 2;
+    }
   }

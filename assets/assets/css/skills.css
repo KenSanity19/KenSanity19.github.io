@@ -105,6 +105,7 @@ p {
 }
 h3.pt-5.mt-5.mb-4.display-6.lh-1.fw-bold {
   color: crimson;
+  animation: fadeinLeft 1s;
 }
 /* Progress Bar */
 section {
@@ -144,4 +145,12 @@ p#footer {
 }
 p.float-end {
   background-color: #141212;
+}
+@keyframes fadeinLeft {
+  from{
+      transform: translate(-100%);
+      opacity: 0;
+  }to{
+      opacity: 1;
+  }
 }

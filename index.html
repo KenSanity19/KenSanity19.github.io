@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Kent Phillip Carreon Personal Website</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@400;700&family=Roboto+Serif:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!--Favicon-->
+    <link href="assets/images/logo1.png" rel="icon">
+
+    <!--Font Icons-->
+    <script src="https://kit.fontawesome.com/4d8ef00d08.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="KDEV Logo">
+            </div>
+            <nav class="navigation">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/carreonkent52" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/1whoswho/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/carreonkent22/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HOME SECTION -->
+    <section id="home" class="hero-section glow-effect">
+        <div class="hero-content">
+            <div class="text-content">
+                <h1>Hi, I'm<br><span class="name">Kent Phillip Carreon</span></h1>
+                <p class="subtitle">Aspiring Web Developer.</p>
+                <div class="buttons">
+                    <a href="#about" class="btn btn-outline">About Me</a>
+                    <a href="#contact" class="btn btn-filled">Contact Me</a>
+                </div>
+                <p class="description">
+                    I build clean, functional, and scalable web applications that solve real-world problems through
+                    thoughtful design and efficient code.
+                </p>
+            </div>
+            <div class="image-content">
+                <div class="profile-image">
+                    <img src="assets/images/ellipseProf.png" alt="Background" class="ellipse-bg">
+                    <img src="assets/images/ako.png" alt="Kent Phillip Carreon" class="profile-photo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about-section">
+        <div class="container-fluid h-100">
+            <div id="aboutCarousel" class="carousel slide h-100" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="2"></button>
+                </div>
+                <div class="carousel-inner h-100">
+                    <!-- Slide 1: About Me -->
+                    <div class="carousel-item active h-100">
+                        <div class="d-flex align-items-center h-100" style="padding: 0 120px;">
+                            <div class="row w-100">
+                                <div class="col-md-4">
+                                    <div class="about-image-container position-relative scroll-animate-left">
+                                        <img src="assets/images/about/aboutImageRec.png" class="img-fluid"
+                                            alt="Background">
+                                        <img src="assets/images/about/shadow.png" class="img-fluid position-absolute"
+                                            style="top: auto; bottom: 0; left: 0; transform: scaleX(-1);" alt="Profile">
+                                    </div>
+                                </div>
+                                <div class="col-md-8 d-flex flex-column justify-content-center">
+                                    <h1 class="scroll-animate"><span style="color: #f8f9fa;">About</span> Me</h1>
+                                    <p class="scroll-animate">I am a 4th year BSIT student and aspiring web developer
+                                        with a strong interest in
+                                        building clean, functional, and user-focused web applications. I enjoy turning
+                                        ideas into structured systems that solve real-world problems.</p>
+                                    <p class="scroll-animate">Through academic and personal projects, I have gained
+                                        hands-on experience in
+                                        developing web applications using modern technologies, with a focus on
+                                        usability, maintainability, and efficient code.</p>
+                                    <div class="d-flex justify-content-end scroll-animate">
+                                        <a href="#projects" class="btn btn-info btn-lg px-4"
+                                            style="font-size: 16px; font-family: 'Roboto Serif', serif;">Projects</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2: What I Do -->
+                    <div class="carousel-item h-100">
+                        <div class="d-flex align-items-center h-100" style="padding: 0 120px;">
+                            <div class="w-100">
+                                <div class="mb-5">
+                                    <h1 class="display-4 scroll-animate" style="color: #d13939;">What <span
+                                            style="color: white;">I
+                                            Do?</span></h1>
+                                </div>
+                                <div class="row g-4 mb-4">
+                                    <div class="col-md-4">
+                                        <div class="what-i-do-card h-100 p-4 scroll-animate-left"
+                                            style="background: rgba(0, 0, 0, 0.3); border-radius: 15px; color: white;">
+                                            <div class="mb-3 d-flex align-items-center">
+                                                <img src="assets/images/about/web.png" alt="Web Development"
+                                                    style="width: 40px; height: 40px; margin-right: 15px;">
+                                                <h4 class="mb-0" style="color: #C2C6C9; font-size: 26px;">Web
+                                                    Development</h4>
+                                            </div>
+                                            <img src="assets/images/about/vectorLine.png" alt="Vector Line"
+                                                style="width: 100%; margin-bottom: 15px;">
+                                            <p style="color: #b8b8b8; font-size: 20px; line-height: 1.5;">Building
+                                                responsive and dynamic web applications using modern tools.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="what-i-do-card h-100 p-4 scroll-animate-scale"
+                                            style="background: rgba(208, 65, 67, 0.5); border-radius: 15px; color: white;">
+                                            <div class="mb-3 d-flex align-items-center">
+                                                <img src="assets/images/about/backend.png" alt="Backend"
+                                                    style="width: 40px; height: 40px; margin-right: 15px;">
+                                                <h4 class="mb-0" style="color: #F8F9FA; font-size: 26px;">Backend &
+                                                    System Logic</h4>
+                                            </div>
+                                            <img src="assets/images/about/vectorLine.png" alt="Vector Line"
+                                                style="width: 100%; margin-bottom: 15px;">
+                                            <p style="color: #e8e8e8; font-size: 20px; line-height: 1.5;">Creating
+                                                structured databases, admin panels, and system workflows.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 position-relative">
+                                        <div class="what-i-do-card h-100 p-4 scroll-animate-right"
+                                            style="background: #F8F9FA; border-radius: 15px; color: #333;">
+                                            <div class="mb-3 d-flex align-items-center">
+                                                <img src="assets/images/about/ui.png" alt="UI Implementation"
+                                                    style="width: 40px; height: 40px; margin-right: 15px;">
+                                                <h4 class="mb-0" style="color: #0B0C0D; font-size: 26px;">UI
+                                                    Implementation</h4>
+                                            </div>
+                                            <img src="assets/images/about/vectorLine.png" alt="Vector Line"
+                                                style="width: 100%; margin-bottom: 15px;">
+                                            <p style="color: #666; font-size: 20px; line-height: 1.5;">Translating
+                                                designs into clean and usable interfaces.</p>
+                                        </div>
+                                        <div class="position-absolute" style="bottom: -60px; right: 15px;">
+                                            <a href="#skills" class="btn"
+                                                style="background: #4ecdc4; color: #0B0C0D; border-radius: 8px; padding: 10px 30px; font-weight: 500; font-size: 16px; font-family: 'Roboto Serif', serif;">Skills</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3: Education -->
+                    <div class="carousel-item h-100">
+                        <div class="d-flex align-items-center h-100" style="padding: 0 120px;">
+                            <div class="w-100">
+                                <h1 class="display-4 text-danger mb-4 scroll-animate">Education</h1>
+                                <div class="row g-3">
+                                    <div class="col-md-6 d-flex flex-column">
+                                        <div class="card card-wccs p-3 scroll-animate-left"
+                                            style="height: 280px; background: rgba(0, 0, 0, 0.3); border-radius: 15px;">
+                                            <div class="d-flex justify-content-between align-items-start">
+                                                <div style="width: 70%;">
+                                                    <h4 class="mb-3" style="color: #C2C6C9;">2010-2016</h4>
+                                                    <p style="color: #C2C6C9;">Completed elementary education, building
+                                                        a strong foundation in basic academics, discipline, and learning
+                                                        skills.</p>
+                                                    <ul class="mb-0" style="color: #C2C6C9;">
+                                                        <li>Participated in school activities and group projects</li>
+                                                    </ul>
+                                                </div>
+                                                <img src="assets/images/about/wccs.jpg" width="100" alt="WCCS Logo">
+                                            </div>
+                                        </div>
+                                        <div class="card card-cnhs p-3 mt-3 scroll-animate-left"
+                                            style="height: 280px; background: rgba(0, 0, 0, 0.3); border-radius: 15px;">
+                                            <div class="d-flex justify-content-between align-items-start">
+                                                <div style="width: 70%;">
+                                                    <h4 class="mb-3" style="color: #C2C6C9;">2016-2022</h4>
+                                                    <p style="color: #C2C6C9;">Completed junior and senior high school
+                                                        education, developing problem-solving skills, teamwork, and an
+                                                        interest in technology-related subjects.</p>
+                                                    <ul class="mb-0" style="color: #C2C6C9;">
+                                                        <li>Basic exposure to computer and ICT subjects</li>
+                                                        <li>Group-based academic projects</li>
+                                                    </ul>
+                                                </div>
+                                                <img src="assets/images/about/cnhs.jpg" width="120" height="120"
+                                                    alt="CNHS Logo">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 d-flex align-items-center justify-content-center">
+                                        <div class="card card-ustp p-3 scroll-animate-right"
+                                            style="height: 380px; background: rgba(0, 0, 0, 0.3); border-radius: 15px;">
+                                            <div class="d-flex justify-content-between align-items-start">
+                                                <div style="width: 70%;">
+                                                    <h4 class="mb-3" style="color: #C2C6C9;">2022-Present</h4>
+                                                    <p style="color: #C2C6C9;">Currently a 4th-year BSIT student focused
+                                                        on web development and system design. Gained hands-on experience
+                                                        through academic and personal projects involving frontend,
+                                                        backend, and database development.</p>
+                                                    <ul class="mb-0" style="color: #C2C6C9;">
+                                                        <li>Web application development using HTML, CSS, JavaScript, and
+                                                            Django</li>
+                                                        <li>System projects such as Easecare, UniVote, and GreenWatts
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <img src="assets/images/about/ustp1.png" width="120" height="120"
+                                                    alt="USTP Logo">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#aboutCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#aboutCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="skills-section py-5">
+        <div class="skills-container">
+            <div class="skills-header">
+                <h1><span class="my-text">My</span> <span class="skills-text">Skills</span></h1>
+                <h4>Technologies and tools I use</h4>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-card frontend-card scroll-animate">
+                    <div class="skill-header">
+                        <div class="skill-icon">
+                            <i class="fab fa-html5"></i>
+                        </div>
+                        <h4>Front-end</h4>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Bootstrap</span>
+                        <span class="skill-tag">Tailwind CSS</span>
+                    </div>
+                    <p>Building responsive and dynamic web applications using modern front-end technologies</p>
+                </div>
+
+                <div class="skill-card backend-card scroll-animate">
+                    <div class="skill-header">
+                        <div class="skill-icon">
+                            <i class="fab fa-python"></i>
+                        </div>
+                        <h4>Back-end</h4>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Django</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">REST APIs</span>
+                    </div>
+                    <p>Developing secure and efficient server-side applications and APIs.</p>
+                </div>
+
+                <div class="skill-card tools-card scroll-animate">
+                    <div class="skill-header">
+                        <div class="skill-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h4>Tools & Technologies</h4>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git & GitHub</span>
+                        <span class="skill-tag">Bitbucket</span>
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">Visual Studio Code</span>
+                    </div>
+                    <p>Utilizing industry-standard tools and platforms for development and collaboration.</p>
+                </div>
+
+                <div class="skill-card learning-card scroll-animate">
+                    <div class="skill-header">
+                        <div class="skill-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h4>Currently Learning</h4>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">API Integration</span>
+                    </div>
+                    <p>Expanding my knowledge and skills to stay updated with the latest technologies.</p>
+                </div>
+            </div>
+
+            <div class="progress-section">
+                <div class="progress-container">
+                    <div class="progress-item">
+                        <h5><span class="progress-color-red">Front-end</span> Development</h5>
+                        <div class="progress-bar" data-percentage="85%">
+                            <div class="progress-fill frontend" style="width: 85%;"></div>
+                        </div>
+                        <div class="progress-labels">
+                            <span>Beginner</span>
+                            <span>Proficient</span>
+                        </div>
+                    </div>
+
+                    <div class="vertical-divider">
+                        <img src="assets/images/skills/verticalLine.png" alt="Divider">
+                    </div>
+
+                    <div class="progress-item">
+                        <h5><span class="progress-color-teal">Back-end</span> Development</h5>
+                        <div class="progress-bar" data-percentage="65%">
+                            <div class="progress-fill backend" style="width: 65%;"></div>
+                        </div>
+                        <div class="progress-labels">
+                            <span>Beginner</span>
+                            <span>Intermediate</span>
+                        </div>
+                    </div>
+
+                    <div class="vertical-divider">
+                        <img src="assets/images/skills/verticalLine.png" alt="Divider">
+                    </div>
+
+                    <div class="progress-item">
+                        <h5>Tools & Technologies</h5>
+                        <div class="progress-bar" data-percentage="75%">
+                            <div class="progress-fill tools" style="width: 75%;"></div>
+                        </div>
+                        <div class="progress-labels">
+                            <span>Intermediate</span>
+                            <span>Proficient</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="projects-section" style="padding: 1rem 0;">
+        <div class="projects-header">
+            <h1 class="projects-title">Projects</h1>
+            <h4 class="projects-subtitle">A collection of academic and personal projects that demonstrate my<br>skills
+                in web development and system designs.</h4>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card scroll-animate">
+                <div class="project-image">
+                    <a href="https://www.figma.com/design/HRlMWq1MskUPXHGd4dKJVT/GreenWatts?node-id=198-56&t=skEgvR6KQDRC3yts-1"
+                        target="_blank">
+                        <!-- Placeholder for project image -->
+                    </a>
+                </div>
+                <div class="project-content">
+                    <img src="assets/images/projects/greenwatts.png" alt="GreenWatt Logo" class="project-logo">
+                    <p class="project-description">An energy monitoring system that tracks electricity usage, calculates
+                        energy costs and CO₂ emissions, and provides insights to promote energy efficiency and
+                        sustainable practices through data visualization and reports.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Django</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">Chart.js</span>
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn-demo" onclick="openDemoModal(event, 'greenwatt')">Live Demo</a>
+                        <a href="https://github.com/KenSanity19/GreenWatts_IoT" class="btn-source" target="_blank"><img
+                                src="assets/images/projects/github.png" width="16" height="16" alt="GitHub"
+                                style="margin-right: 5px;">Source Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card scroll-animate">
+                <div class="project-image">
+                    <a href="https://www.figma.com/design/ONdTOKNWV7k7fWfrQzu66o/Student-Council-Voting-System?node-id=727-390&t=oLXMPrmjTcX9RdDG-1"
+                        target="_blank">
+                        <img src="assets/images/projects/univoteImage.png" alt="UniVote Project">
+                    </a>
+                </div>
+                <div class="project-content">
+                    <img src="assets/images/projects/univote.png" alt="UniVote Logo" class="project-logo">
+                    <p class="project-description">A web-based voting system designed to manage elections securely and
+                        efficiently. UniVote features an admin dashboard for managing candidates and voters, real-time
+                        vote counting, and user authentication to ensure fair and transparent elections.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Django</span>
+                        <span class="tech-tag">MariaDB</span>
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn-demo" onclick="openDemoModal(event, 'univote')">Live Demo</a>
+                        <a href="https://github.com/KenSanity19/UniVote" class="btn-source" target="_blank"><img
+                                src="assets/images/projects/github.png" width="16" height="16" alt="GitHub"
+                                style="margin-right: 5px;">Source Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card scroll-animate">
+                <div class="project-image">
+                    <a href="https://www.figma.com/design/xbLdvOf44CYTnyWjQGKJwA/EASECARE-MOBILE-APP?node-id=0-1&t=PAeaDCh4wXPv7c65-1"
+                        target="_blank">
+                        <!-- Placeholder for project image -->
+                    </a>
+                </div>
+                <div class="project-content">
+                    <div class="easecare-header">
+                        <img src="assets/images/projects/easecare.png" alt="EaseCare Logo" class="easecare-logo">
+                        <h2 class="easecare-title">Ease<span class="care-text">Care</span></h2>
+                    </div>
+                    <p class="project-description">A web-based voting system designed to manage elections securely and
+                        efficiently. UniVote features an admin dashboard for managing candidates and voters, real-time
+                        vote counting, and user authentication to ensure fair and transparent elections.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">node.js</span>
+                        <span class="tech-tag">Firebase</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Expo</span>
+                        <span class="tech-tag">axios</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="btn-demo" onclick="openDemoModal(event, 'easecare')">Live Demo</a>
+                        <a href="https://github.com/KenSanity19/Easecare" class="btn-source" target="_blank"><img
+                                src="assets/images/projects/github.png" width="16" height="16" alt="GitHub"
+                                style="margin-right: 5px;">Source Code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Demo Modal -->
+    <div id="demoModal" class="demo-modal">
+        <div class="demo-modal-content">
+            <div class="demo-video-container">
+                <video controls>
+                    <source src="assets/videos/UnivoteWebDemo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="demo-description">
+                <h3>UniVote Web Interface System Demo</h3>
+            </div>
+            <button class="demo-close" onclick="closeDemoModal()">&times;</button>
+        </div>
+    </div>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact-section py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card scroll-animate-scale">
+                        <div class="card-header text-center">
+                            <h2>Contact Me</h2>
+                            <p>I want to hear from you! Please fill this form.</p>
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea class="form-control" id="message" rows="4" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-4 text-center">
+        <div class="container">
+            <p>&copy; 2023 Phillip, Inc. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/carreonkent52" class="me-3" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/1whoswho/" class="me-3" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/carreonkent22/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/particles.js"></script>
+    <script>
+        // Active nav link animation
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.navigation a');
+
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 150;
+                if (scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Scroll Animation Observer
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with scroll animation classes
+        document.addEventListener('DOMContentLoaded', () => {
+            const animatedElements = document.querySelectorAll(
+                '.scroll-animate, .scroll-animate-left, .scroll-animate-right, ' +
+                '.scroll-animate-scale, .scroll-animate-fade, .skill-card, ' +
+                '.what-i-do-card, .projects-section .card, .contact-section .card'
+            );
+
+            animatedElements.forEach(el => {
+                observer.observe(el);
+            });
+        });
+
+        // Demo Modal Functions
+        function openDemoModal(event, project) {
+            event.preventDefault();
+            const modal = document.getElementById('demoModal');
+            const video = modal.querySelector('video source');
+            const title = modal.querySelector('.demo-description h3');
+            
+            // Set video and title based on project
+            if (project === 'univote') {
+                video.src = 'assets/videos/UnivoteWebDemo.mp4';
+                title.textContent = 'UniVote Web Interface System Demo';
+            } else if (project === 'greenwatt') {
+                video.src = 'assets/videos/GreenwattDemo.mp4';
+                title.textContent = 'GreenWatt Energy Monitoring Demo';
+            } else if (project === 'easecare') {
+                video.src = 'assets/videos/EasecareDemo.mp4';
+                title.textContent = 'EaseCare Mobile App Demo';
+            }
+            
+            modal.querySelector('video').load();
+            modal.style.display = 'flex';
+        }
+
+        function closeDemoModal() {
+            const modal = document.getElementById('demoModal');
+            const video = modal.querySelector('video');
+            if (video) {
+                video.pause();
+                video.currentTime = 0;
+            }
+            modal.style.display = 'none';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function (event) {
+            const modal = document.getElementById('demoModal');
+            if (event.target === modal) {
+                const video = modal.querySelector('video');
+                if (video) {
+                    video.pause();
+                    video.currentTime = 0;
+                }
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+
+</html>

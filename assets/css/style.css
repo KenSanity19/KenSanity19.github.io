@@ -433,13 +433,14 @@ section {
 }
 
 .skill-card {
-    background: rgba(26, 26, 27, 0.6);
+    background: #1A1A1B;
     padding: 30px;
     border-radius: 15px;
     text-align: left;
     position: relative;
     min-height: 300px;
     transition: all 0.3s ease;
+    z-index: 10;
 }
 
 .skill-card:hover {
@@ -534,12 +535,14 @@ section {
 }
 
 .progress-container {
-    background: rgba(26, 26, 27, 0.6);
+    background: #1A1A1B;
     border-radius: 15px;
     padding: 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
+    z-index: 10;
 }
 
 .progress-section .progress-item {
@@ -706,6 +709,8 @@ section {
     background-color: #1a1a1a;
     border: 1px solid #333;
     transition: all 0.3s ease;
+    position: relative;
+    z-index: 10;
 }
 
 .card:hover {
@@ -776,6 +781,8 @@ section {
     overflow: hidden;
     transition: all 0.3s ease;
     height: 220px;
+    position: relative;
+    z-index: 10;
 }
 
 .project-card:hover {
@@ -1385,6 +1392,8 @@ footer {
     opacity: 0;
     transform: translateY(40px) scale(0.95);
     transition: all 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    z-index: 10;
 }
 
 .what-i-do-card.animate {
@@ -1409,6 +1418,8 @@ footer {
     opacity: 0;
     transform: translateY(30px) scale(0.95);
     transition: all 0.8s ease-out;
+    position: relative;
+    z-index: 10;
 }
 
 .contact-section .card.animate {
@@ -1428,7 +1439,7 @@ footer {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    z-index: 1;
+    z-index: -1;
 }
 
 
@@ -1634,4 +1645,8 @@ header.scrolled .social-icons a {
     height: 100%;
     object-fit: cover;
     border-radius: 15px;
+}
+.about-section .card {
+    position: relative;
+    z-index: 10;
 }

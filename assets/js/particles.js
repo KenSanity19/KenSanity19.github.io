@@ -15,7 +15,7 @@ class ParticleSystem {
         this.canvas.style.width = '100%';
         this.canvas.style.height = '100%';
         this.canvas.style.pointerEvents = 'none';
-        this.canvas.style.zIndex = '1';
+        this.canvas.style.zIndex = '-1';
         document.body.appendChild(this.canvas);
 
         this.resize();

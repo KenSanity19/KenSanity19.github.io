@@ -17,7 +17,7 @@ body {
 
 /* Header Styles */
 header {
-    background: transparent;
+    background: #0B0C0D;
     padding: 20px 0;
     position: fixed;
     width: 100%;
@@ -1574,7 +1574,7 @@ header.scrolled .social-icons a {
 .profile-photo {
     filter: contrast(1.05) saturate(1.1) drop-shadow(0 0 3px rgba(208, 65, 68, 0.05)) !important;
 }
-/* Demo Modal Styles */
+/* Enhanced Demo Modal Styles */
 .demo-modal {
     display: none;
     position: fixed;
@@ -1583,81 +1583,407 @@ header.scrolled .social-icons a {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background: linear-gradient(135deg, rgba(11, 12, 13, 0.95), rgba(26, 26, 27, 0.95));
+    backdrop-filter: blur(10px);
     justify-content: center;
     align-items: center;
+    animation: modalFadeIn 0.4s ease-out;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        backdrop-filter: blur(0px);
+    }
+    to {
+        opacity: 1;
+        backdrop-filter: blur(10px);
+    }
+}
+
+@keyframes modalFadeOut {
+    from {
+        opacity: 1;
+        backdrop-filter: blur(10px);
+    }
+    to {
+        opacity: 0;
+        backdrop-filter: blur(0px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .demo-modal-content {
-    background-color: #2A2A2A;
-    border-radius: 20px;
-    padding: 40px;
-    max-width: 90vw;
-    max-height: 90vh;
+    background: linear-gradient(145deg, #1A1A1B, #0B0C0D);
+    border: 1px solid rgba(91, 204, 191, 0.2);
+    border-radius: 25px;
+    padding: 0;
+    max-width: 95vw;
+    max-height: 95vh;
     width: auto;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 
+        0 25px 50px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(91, 204, 191, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    animation: modalSlideIn 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform-origin: center;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8) translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.demo-modal-header {
+    background: linear-gradient(135deg, #D04144, #B83638);
+    padding: 20px 30px;
+    border-radius: 25px 25px 0 0;
     position: relative;
     overflow: hidden;
 }
 
-.demo-video-container {
-    background-color: #C4C4C4;
-    border-radius: 15px;
-    height: auto;
-    min-height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 30px;
-    overflow: hidden;
-}
-
-.demo-placeholder {
-    font-family: 'Roboto Serif', serif;
-    font-size: 24px;
-    color: #666;
-}
-
-.demo-description {
-    text-align: center;
-}
-
-.demo-description p {
-    font-family: 'Roboto Serif', serif;
-    font-size: 18px;
-    color: #B0B0B0;
-    margin: 0;
-}
-
-.demo-close {
+.demo-modal-header::before {
+    content: '';
     position: absolute;
-    top: 15px;
-    right: 20px;
-    background: none;
-    border: none;
-    font-size: 30px;
-    color: #B0B0B0;
-    cursor: pointer;
-    transition: color 0.3s ease;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    animation: headerShimmer 3s infinite;
 }
 
-.demo-close:hover {
-    color: #F8F9FA;
+@keyframes headerShimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
 }
-/* Modal Background Override */
-.demo-modal-content {
-    background-color: #0B0C0D !important;
+
+.demo-modal-body {
+    padding: 30px;
 }
 
 .demo-video-container {
+    background: linear-gradient(145deg, #2A2A2A, #1A1A1B);
+    border: 2px solid rgba(91, 204, 191, 0.3);
+    border-radius: 20px;
+    padding: 15px;
+    margin-bottom: 25px;
+    position: relative;
     overflow: hidden;
+    animation: containerPulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes containerPulse {
+    from {
+        box-shadow: 
+            0 0 20px rgba(91, 204, 191, 0.2),
+            inset 0 0 20px rgba(91, 204, 191, 0.05);
+    }
+    to {
+        box-shadow: 
+            0 0 30px rgba(91, 204, 191, 0.4),
+            inset 0 0 30px rgba(91, 204, 191, 0.1);
+    }
+}
+
+.demo-video-container::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #5BCCBF, #D04144, #5BCCBF);
+    border-radius: 22px;
+    z-index: -1;
+    animation: borderRotate 3s linear infinite;
+}
+
+@keyframes borderRotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 .demo-video-container video {
     width: 100%;
     height: auto;
-    max-height: 70vh;
+    max-height: 65vh;
     object-fit: contain;
     border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.demo-video-container:hover video {
+    transform: scale(1.02);
+}
+
+.demo-description {
+    text-align: center;
+    padding: 20px 0;
+    background: linear-gradient(135deg, rgba(91, 204, 191, 0.1), rgba(208, 65, 68, 0.1));
+    border-radius: 15px;
+    margin-top: 20px;
+    border: 1px solid rgba(91, 204, 191, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.demo-description::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(91, 204, 191, 0.1), transparent);
+    animation: descriptionShimmer 4s infinite;
+}
+
+@keyframes descriptionShimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+.demo-description h3 {
+    font-family: 'Averia Serif Libre', serif;
+    font-size: 24px;
+    color: #F8F9FA;
+    margin: 0;
+    text-shadow: 0 0 10px rgba(91, 204, 191, 0.3);
+    animation: titleGlow 2s ease-in-out infinite alternate;
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes titleGlow {
+    from {
+        text-shadow: 0 0 10px rgba(91, 204, 191, 0.3);
+    }
+    to {
+        text-shadow: 0 0 20px rgba(91, 204, 191, 0.6), 0 0 30px rgba(91, 204, 191, 0.3);
+    }
+}
+
+.demo-description p {
+    font-family: 'Roboto Serif', serif;
+    font-size: 16px;
+    color: #B0B0B0;
+    margin: 10px 0 0 0;
+    opacity: 0.8;
+    position: relative;
+    z-index: 1;
+}
+
+.demo-close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    background: rgba(208, 65, 68, 0.2);
+    border: 2px solid rgba(208, 65, 68, 0.5);
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    color: #F8F9FA;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.demo-close:hover {
+    background: rgba(208, 65, 68, 0.8);
+    border-color: #D04144;
+    transform: rotate(90deg) scale(1.1);
+    box-shadow: 0 0 15px rgba(208, 65, 68, 0.5);
+}
+
+.demo-controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(26, 26, 27, 0.5);
+    border-radius: 15px;
+    border: 1px solid rgba(91, 204, 191, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.demo-controls::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(91, 204, 191, 0.05), transparent);
+    animation: controlsShimmer 5s infinite;
+}
+
+@keyframes controlsShimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+.demo-control-btn {
+    background: linear-gradient(135deg, #5BCCBF, #4AB3A6);
+    color: #0B0C0D;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-family: 'Roboto Serif', serif;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.demo-control-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s;
+}
+
+.demo-control-btn:hover::before {
+    left: 100%;
+}
+
+.demo-control-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(91, 204, 191, 0.4);
+}
+
+.demo-control-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(91, 204, 191, 0.3);
+}
+
+/* Loading Animation */
+.demo-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    color: #5BCCBF;
+}
+
+.demo-spinner {
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(91, 204, 191, 0.3);
+    border-top: 3px solid #5BCCBF;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Progress indicator for video loading */
+.demo-progress {
+    width: 100%;
+    height: 4px;
+    background: rgba(91, 204, 191, 0.2);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-top: 15px;
+}
+
+.demo-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #5BCCBF, #D04144);
+    border-radius: 2px;
+    animation: progressFlow 2s ease-in-out infinite;
+}
+
+@keyframes progressFlow {
+    0% { width: 0%; }
+    50% { width: 70%; }
+    100% { width: 100%; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .demo-modal-content {
+        max-width: 98vw;
+        max-height: 98vh;
+        border-radius: 20px;
+    }
+    
+    .demo-modal-header {
+        padding: 15px 20px;
+        border-radius: 20px 20px 0 0;
+    }
+    
+    .demo-modal-body {
+        padding: 20px;
+    }
+    
+    .demo-video-container {
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .demo-video-container video {
+        max-height: 50vh;
+    }
+    
+    .demo-description h3 {
+        font-size: 20px;
+    }
+    
+    .demo-close {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+        top: 15px;
+        right: 20px;
+    }
+    
+    .demo-controls {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .demo-control-btn {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
 }
 .about-section .card {
     position: relative;

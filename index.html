@@ -476,20 +476,32 @@
         </div>
     </section>
 
-    <!-- Demo Modal -->
+    <!-- Enhanced Demo Modal -->
     <div id="demoModal" class="demo-modal">
         <div class="demo-modal-content">
-            <div class="demo-video-container">
-                <video controls preload="metadata" width="100%">
-                    <source
-                        src="https://github.com/KenSanity19/KenSanity19.github.io/raw/main/assets/videos/UnivoteWebDemo.mp4"
-                        type="video/mp4">
-                    <source src="./assets/videos/UnivoteWebDemo.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+            <div class="demo-modal-header">
+                <h2 id="demoTitle" style="color: #F8F9FA; margin: 0; font-family: 'Averia Serif Libre', serif; font-size: 28px;">Project Demo</h2>
             </div>
-            <div class="demo-description">
-                <h3>UniVote Web Interface System Demo</h3>
+            <div class="demo-modal-body">
+                <div class="demo-video-container">
+                    <div class="demo-loading" id="demoLoading" style="display: none;">
+                        <div class="demo-spinner"></div>
+                        <p style="font-family: 'Roboto Serif', serif; color: #5BCCBF;">Loading demo...</p>
+                    </div>
+                    <video id="demoVideo" controls preload="metadata" style="display: none;">
+                        <source src="" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="demo-description">
+                    <h3 id="demoDescriptionTitle">UniVote Web Interface System Demo</h3>
+                    <p id="demoDescriptionText">Experience the full functionality of the voting system interface</p>
+                </div>
+                <div class="demo-controls">
+                    <button class="demo-control-btn" onclick="toggleFullscreen()">⛶ Fullscreen</button>
+                    <button class="demo-control-btn" onclick="restartVideo()">↻ Restart</button>
+                    <button class="demo-control-btn" onclick="downloadVideo()">⬇ Download</button>
+                </div>
             </div>
             <button class="demo-close" onclick="closeDemoModal()">&times;</button>
         </div>
@@ -663,40 +675,117 @@
             });
         });
 
-        // Demo Modal Functions
+        // Enhanced Demo Modal Functions
         function openDemoModal(event, project) {
             event.preventDefault();
             const modal = document.getElementById('demoModal');
-            const video = modal.querySelector('video source');
-            const title = modal.querySelector('.demo-description h3');
+            const video = document.getElementById('demoVideo');
+            const loading = document.getElementById('demoLoading');
+            const title = document.getElementById('demoTitle');
+            const descTitle = document.getElementById('demoDescriptionTitle');
+            const descText = document.getElementById('demoDescriptionText');
 
-            // Set video and title based on project
+            // Show loading state
+            loading.style.display = 'flex';
+            video.style.display = 'none';
+
+            // Set content based on project
+            let videoSrc, modalTitle, descriptionTitle, descriptionText;
+            
             if (project === 'univote') {
-                video.src = 'https://github.com/KenSanity19/KenSanity19.github.io/raw/main/assets/videos/UnivoteWebDemo.mp4';
-                title.textContent = 'UniVote Web Interface System Demo';
+                videoSrc = 'https://github.com/KenSanity19/KenSanity19.github.io/raw/main/assets/videos/UnivoteWebDemo.mp4';
+                modalTitle = 'UniVote Web Demo';
+                descriptionTitle = 'UniVote Web Interface System Demo';
+                descriptionText = 'Experience the complete web-based voting system with admin dashboard and real-time vote counting';
             } else if (project === 'univote-mobile') {
-                video.src = 'https://github.com/KenSanity19/KenSanity19.github.io/raw/main/assets/videos/UnivoteMobileDemo.mp4';
-                title.textContent = 'UniVote Mobile App Demo';
+                videoSrc = 'https://github.com/KenSanity19/KenSanity19.github.io/raw/main/assets/videos/UnivoteMobileDemo.mp4';
+                modalTitle = 'UniVote Mobile Demo';
+                descriptionTitle = 'UniVote Mobile App Demo';
+                descriptionText = 'Explore the mobile voting experience with intuitive touch interface and secure authentication';
             } else if (project === 'greenwatt') {
-                video.src = 'https://github.com/KenSanity19/KenSanity19.github.io/raw/main/assets/videos/GreenwattDemo.mp4';
-                title.textContent = 'GreenWatt Energy Monitoring Demo';
+                videoSrc = 'https://github.com/KenSanity19/KenSanity19.github.io/raw/main/assets/videos/GreenwattDemo.mp4';
+                modalTitle = 'GreenWatts Demo';
+                descriptionTitle = 'GreenWatts Energy Monitoring Demo';
+                descriptionText = 'Discover how to track energy consumption, calculate costs, and monitor CO₂ emissions in real-time';
             } else if (project === 'easecare') {
-                video.src = 'https://github.com/KenSanity19/KenSanity19.github.io/raw/main/assets/videos/EasecareDemo.mp4';
-                title.textContent = 'EaseCare Mobile App Demo';
+                videoSrc = 'https://github.com/KenSanity19/KenSanity19.github.io/raw/main/assets/videos/EasecareDemo.mp4';
+                modalTitle = 'EaseCare Demo';
+                descriptionTitle = 'EaseCare Mobile App Demo';
+                descriptionText = 'See how EaseCare simplifies healthcare management with its user-friendly mobile interface';
             }
 
-            modal.querySelector('video').load();
+            // Update modal content
+            title.textContent = modalTitle;
+            descTitle.textContent = descriptionTitle;
+            descText.textContent = descriptionText;
+            video.querySelector('source').src = videoSrc;
+            video.load();
+
+            // Show modal with animation
             modal.style.display = 'flex';
+            
+            // Handle video loading
+            video.addEventListener('loadeddata', function() {
+                loading.style.display = 'none';
+                video.style.display = 'block';
+                video.style.animation = 'fadeIn 0.5s ease-in';
+            }, { once: true });
+
+            video.addEventListener('error', function() {
+                loading.innerHTML = '<div style="color: #D04144; text-align: center;"><i class="fas fa-exclamation-triangle" style="font-size: 30px; margin-bottom: 10px;"></i><p>Failed to load video demo</p></div>';
+            }, { once: true });
         }
 
         function closeDemoModal() {
             const modal = document.getElementById('demoModal');
-            const video = modal.querySelector('video');
-            if (video) {
-                video.pause();
-                video.currentTime = 0;
+            const video = document.getElementById('demoVideo');
+            const loading = document.getElementById('demoLoading');
+            
+            // Add closing animation
+            modal.style.animation = 'modalFadeOut 0.3s ease-in';
+            
+            setTimeout(() => {
+                if (video) {
+                    video.pause();
+                    video.currentTime = 0;
+                    video.style.display = 'none';
+                }
+                loading.style.display = 'none';
+                modal.style.display = 'none';
+                modal.style.animation = '';
+            }, 300);
+        }
+
+        // Additional control functions
+        function toggleFullscreen() {
+            const video = document.getElementById('demoVideo');
+            if (video.requestFullscreen) {
+                video.requestFullscreen();
+            } else if (video.webkitRequestFullscreen) {
+                video.webkitRequestFullscreen();
+            } else if (video.msRequestFullscreen) {
+                video.msRequestFullscreen();
             }
-            modal.style.display = 'none';
+        }
+
+        function restartVideo() {
+            const video = document.getElementById('demoVideo');
+            video.currentTime = 0;
+            video.play();
+        }
+
+        function downloadVideo() {
+            const video = document.getElementById('demoVideo');
+            const source = video.querySelector('source');
+            if (source && source.src) {
+                const link = document.createElement('a');
+                link.href = source.src;
+                link.download = 'demo-video.mp4';
+                link.target = '_blank';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
         }
 
         // Close modal when clicking outside

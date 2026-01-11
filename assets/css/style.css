@@ -100,6 +100,12 @@ section {
     overflow: hidden;
 }
 
+/* Projects Section */
+section#projects {
+    min-height: 150vh;
+    max-height: 150vh;
+}
+
 /* Hero Section */
 .hero-section {
     display: flex;
@@ -124,7 +130,7 @@ section {
     padding: 0 40px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 80px;
+    gap: 135px;
     align-items: center;
 }
 
@@ -224,6 +230,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: 100px;
 }
 
 .profile-image {
@@ -743,7 +750,7 @@ section {
 }
 
 /* Projects Section */
-.projects-section {
+.projects-page-section {
     background-color: #2A2A2A;
     overflow-y: auto;
     padding: 80px 0;
@@ -754,6 +761,7 @@ section {
     color: #D04144;
     font-size: 3rem;
     font-weight: 700;
+    padding-top: 50px;
 }
 
 .projects-subtitle {
@@ -1402,13 +1410,13 @@ footer {
 }
 
 /* Project cards animations */
-.projects-section .card {
+.projects-page-section .card {
     opacity: 0;
     transform: translateY(30px);
     transition: all 0.6s ease-out;
 }
 
-.projects-section .card.animate {
+.projects-page-section .card.animate {
     opacity: 1;
     transform: translateY(0);
 }

@@ -39,7 +39,8 @@
             <div class="social-icons">
                 <a href="https://www.facebook.com/carreonkent52" target="_blank"><i class="fab fa-facebook-f"></i></a>
                 <a href="https://www.instagram.com/1whoswho/" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/carreonkent22/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.linkedin.com/in/carreonkent22/" target="_blank"><i
+                        class="fab fa-linkedin-in"></i></a>
             </div>
         </div>
     </header>
@@ -49,7 +50,7 @@
         <div class="hero-content">
             <div class="text-content">
                 <h1>Hi, I'm<br><span class="name">Kent Phillip Carreon</span></h1>
-                <p class="subtitle">Aspiring Web Developer.</p>
+                <p class="subtitle" id="typing-subtitle">Web Developer<span class="cursor">|</span></p>
                 <div class="buttons">
                     <a href="#about" class="btn btn-outline">About Me</a>
                     <a href="#contact" class="btn btn-filled">Contact Me</a>
@@ -373,7 +374,7 @@
     </section>
 
     <!-- PROJECTS SECTION -->
-    <section id="projects" class="projects-section" style="padding: 1rem 0;">
+    <section id="projects" class="projects-page-section" style="padding: 1rem 0;">
         <div class="projects-header">
             <h1 class="projects-title">Projects</h1>
             <h4 class="projects-subtitle">A collection of academic and personal projects that demonstrate my<br>skills
@@ -383,9 +384,9 @@
         <div class="projects-grid">
             <div class="project-card scroll-animate">
                 <div class="project-image">
-                    <a href="https://www.figma.com/design/HRlMWq1MskUPXHGd4dKJVT/GreenWatts?node-id=198-56&t=skEgvR6KQDRC3yts-1"
+                    <a href="https://www.figma.com/design/HRlMWq1MskUPXHGd4dKJVT/GreenWatts?node-id=198-56&t=jgBPoS2SKI8vJu2O-1"
                         target="_blank">
-                        <!-- Placeholder for project image -->
+                        <img src="assets/images/projects/greenwattsImage.png" alt="GreenWatts Project">
                     </a>
                 </div>
                 <div class="project-content">
@@ -431,7 +432,8 @@
                     </div>
                     <div class="project-links">
                         <a href="#" class="btn-demo" onclick="openDemoModal(event, 'univote')">Web Live Demo</a>
-                        <a href="#" class="btn-demo" onclick="openDemoModal(event, 'univote-mobile')" style="background-color: #D04144; color: #f9f8fa;">Mobile Live Demo</a>
+                        <a href="#" class="btn-demo" onclick="openDemoModal(event, 'univote-mobile')"
+                            style="background-color: #D04144; color: #f9f8fa;">Mobile Live Demo</a>
                         <a href="https://github.com/KenSanity19/UniVote" class="btn-source" target="_blank"><img
                                 src="assets/images/projects/github.png" width="16" height="16" alt="GitHub"
                                 style="margin-right: 5px;">Source Code</a>
@@ -479,7 +481,9 @@
         <div class="demo-modal-content">
             <div class="demo-video-container">
                 <video controls preload="metadata" width="100%">
-                    <source src="https://github.com/KenSanity19/KenSanity19.github.io/raw/main/assets/videos/UnivoteWebDemo.mp4" type="video/mp4">
+                    <source
+                        src="https://github.com/KenSanity19/KenSanity19.github.io/raw/main/assets/videos/UnivoteWebDemo.mp4"
+                        type="video/mp4">
                     <source src="./assets/videos/UnivoteWebDemo.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
@@ -529,16 +533,88 @@
         <div class="container">
             <p>&copy; 2023 Phillip, Inc. All rights reserved.</p>
             <div class="social-links">
-                <a href="https://www.facebook.com/carreonkent52" class="me-3" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/1whoswho/" class="me-3" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/carreonkent22/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.facebook.com/carreonkent52" class="me-3" target="_blank"><i
+                        class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/1whoswho/" class="me-3" target="_blank"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/carreonkent22/" target="_blank"><i
+                        class="fab fa-linkedin-in"></i></a>
             </div>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/particles.js"></script>
+    <style>
+        .cursor {
+            animation: blink 1s infinite;
+            color: #d13939;
+        }
+
+        @keyframes blink {
+
+            0%,
+            50% {
+                opacity: 1;
+            }
+
+            51%,
+            100% {
+                opacity: 0;
+            }
+        }
+    </style>
     <script>
+        // Typing animation for name
+        const nameText = "Kent Phillip Carreon";
+        const nameElement = document.getElementById('typing-name');
+        let i = 0;
+
+        function typeWriter() {
+            if (i < nameText.length) {
+                nameElement.innerHTML += nameText.charAt(i);
+                i++;
+                setTimeout(typeWriter, 100);
+            }
+        }
+
+        // Typing animation for subtitle
+        const subtitleTexts = ["Full-Stack Web Developer", "UI/UX Designer", "Mobile Developer"];
+        const subtitleElement = document.getElementById('typing-subtitle');
+        let currentTextIndex = 0;
+        let currentCharIndex = 0;
+        let isDeleting = false;
+
+        function typeSubtitle() {
+            const currentText = subtitleTexts[currentTextIndex];
+            
+            if (isDeleting) {
+                subtitleElement.innerHTML = currentText.substring(0, currentCharIndex - 1) + '<span class="cursor">|</span>';
+                currentCharIndex--;
+            } else {
+                subtitleElement.innerHTML = currentText.substring(0, currentCharIndex + 1) + '<span class="cursor">|</span>';
+                currentCharIndex++;
+            }
+
+            let typeSpeed = isDeleting ? 50 : 100;
+
+            if (!isDeleting && currentCharIndex === currentText.length) {
+                typeSpeed = 2000;
+                isDeleting = true;
+            } else if (isDeleting && currentCharIndex === 0) {
+                isDeleting = false;
+                currentTextIndex = (currentTextIndex + 1) % subtitleTexts.length;
+                typeSpeed = 500;
+            }
+
+            setTimeout(typeSubtitle, typeSpeed);
+        }
+
+        // Start typing animation when page loads
+        window.addEventListener('load', () => {
+            setTimeout(typeWriter, 1000);
+            setTimeout(typeSubtitle, 2000);
+        });
         // Active nav link animation
         window.addEventListener('scroll', () => {
             const sections = document.querySelectorAll('section');
@@ -593,7 +669,7 @@
             const modal = document.getElementById('demoModal');
             const video = modal.querySelector('video source');
             const title = modal.querySelector('.demo-description h3');
-            
+
             // Set video and title based on project
             if (project === 'univote') {
                 video.src = 'https://github.com/KenSanity19/KenSanity19.github.io/raw/main/assets/videos/UnivoteWebDemo.mp4';
@@ -608,7 +684,7 @@
                 video.src = 'https://github.com/KenSanity19/KenSanity19.github.io/raw/main/assets/videos/EasecareDemo.mp4';
                 title.textContent = 'EaseCare Mobile App Demo';
             }
-            
+
             modal.querySelector('video').load();
             modal.style.display = 'flex';
         }

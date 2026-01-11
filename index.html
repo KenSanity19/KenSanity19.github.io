@@ -480,7 +480,9 @@
     <div id="demoModal" class="demo-modal">
         <div class="demo-modal-content">
             <div class="demo-modal-header">
-                <h2 id="demoTitle" style="color: #F8F9FA; margin: 0; font-family: 'Averia Serif Libre', serif; font-size: 28px;">Project Demo</h2>
+                <h2 id="demoTitle"
+                    style="color: #F8F9FA; margin: 0; font-family: 'Averia Serif Libre', serif; font-size: 28px;">
+                    Project Demo</h2>
             </div>
             <div class="demo-modal-body">
                 <div class="demo-video-container">
@@ -508,31 +510,104 @@
     </div>
 
     <!-- CONTACT SECTION -->
-    <section id="contact" class="contact-section py-5">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <div class="card scroll-animate-scale">
-                        <div class="card-header text-center">
-                            <h2>Contact Me</h2>
-                            <p>I want to hear from you! Please fill this form.</p>
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <div class="contact-header">
+                <h1><span class="contact-text">Contact</span> <span class="me-text">Me</span></h1>
+                <h4>Let's connect and bring your ideas to life</h4>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-form-container scroll-animate-left">
+                    <div class="contact-form-card">
+                        <div class="form-header">
+                            <h3>Send me a message</h3>
+                            <p>I'd love to hear about your project or just say hello!</p>
                         </div>
-                        <div class="card-body">
-                            <form>
-                                <div class="mb-3">
-                                    <label for="name" class="form-label">Name</label>
-                                    <input type="text" class="form-control" id="name" required>
+                        <form class="contact-form">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Full Name</label>
+                                <input type="text" class="form-input" id="name" placeholder="Enter your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" class="form-input" id="email" placeholder="Enter your email"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input type="text" class="form-input" id="subject" placeholder="What's this about?"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-textarea" id="message" rows="5"
+                                    placeholder="Tell me about your project or idea..." required></textarea>
+                            </div>
+                            <button type="submit" class="contact-submit-btn">
+                                <span>Send Message</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="contact-info-container scroll-animate-right">
+                    <div class="contact-info-card">
+                        <h3>Get in touch</h3>
+                        <p>Ready to start your next project? Let's discuss how we can work together.</p>
+
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="method-icon email-icon">
+                                    <i class="fas fa-envelope"></i>
                                 </div>
-                                <div class="mb-3">
-                                    <label for="email" class="form-label">Email</label>
-                                    <input type="email" class="form-control" id="email" required>
+                                <div class="method-info">
+                                    <h4>Email</h4>
+                                    <p>carreon.kentphillip18@gmail.com</p>
                                 </div>
-                                <div class="mb-3">
-                                    <label for="message" class="form-label">Message</label>
-                                    <textarea class="form-control" id="message" rows="4" required></textarea>
+                            </div>
+
+                            <div class="contact-method">
+                                <div class="method-icon phone-icon">
+                                    <i class="fas fa-phone"></i>
                                 </div>
-                                <button type="submit" class="btn btn-primary w-100">Submit</button>
-                            </form>
+                                <div class="method-info">
+                                    <h4>Phone</h4>
+                                    <p>+63 975 324 7640 </p>
+                                </div>
+                            </div>
+
+                            <div class="contact-method">
+                                <div class="method-icon location-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="method-info">
+                                    <h4>Location</h4>
+                                    <p>Cagayan de Oro, Philippines</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-connect">
+                            <h4>Connect with me</h4>
+                            <div class="social-links-contact">
+                                <a href="https://www.facebook.com/carreonkent52" target="_blank"
+                                    class="social-link facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="https://www.instagram.com/1whoswho/" target="_blank"
+                                    class="social-link instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/carreonkent22/" target="_blank"
+                                    class="social-link linkedin">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                                <a href="https://github.com/KenSanity19" target="_blank" class="social-link github">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -541,16 +616,58 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="py-4 text-center">
-        <div class="container">
-            <p>&copy; 2023 Phillip, Inc. All rights reserved.</p>
-            <div class="social-links">
-                <a href="https://www.facebook.com/carreonkent52" class="me-3" target="_blank"><i
-                        class="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/1whoswho/" class="me-3" target="_blank"><i
-                        class="fab fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/carreonkent22/" target="_blank"><i
-                        class="fab fa-linkedin-in"></i></a>
+    <footer class="footer-section">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="assets/images/logo.png" alt="KDEV Logo" class="footer-logo">
+                    <h3>Kent Phillip Carreon</h3>
+                    <p>Full-Stack Web Developer passionate about creating innovative digital solutions.</p>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4>Connect</h4>
+                        <div class="footer-social">
+                            <a href="https://www.facebook.com/carreonkent52" target="_blank" class="footer-social-link">
+                                <i class="fab fa-facebook-f"></i>
+                                <span>Facebook</span>
+                            </a>
+                            <a href="https://www.instagram.com/1whoswho/" target="_blank" class="footer-social-link">
+                                <i class="fab fa-instagram"></i>
+                                <span>Instagram</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/carreonkent22/" target="_blank"
+                                class="footer-social-link">
+                                <i class="fab fa-linkedin-in"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://github.com/KenSanity19" target="_blank" class="footer-social-link">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-divider"></div>
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 Kent Phillip Carreon. All rights reserved.</p>
+                    <p>Made with <span class="heart">❤️</span> in the Philippines</p>
+                </div>
             </div>
         </div>
     </footer>
@@ -599,7 +716,7 @@
 
         function typeSubtitle() {
             const currentText = subtitleTexts[currentTextIndex];
-            
+
             if (isDeleting) {
                 subtitleElement.innerHTML = currentText.substring(0, currentCharIndex - 1) + '<span class="cursor">|</span>';
                 currentCharIndex--;
@@ -691,7 +808,7 @@
 
             // Set content based on project
             let videoSrc, modalTitle, descriptionTitle, descriptionText;
-            
+
             if (project === 'univote') {
                 videoSrc = 'https://github.com/KenSanity19/KenSanity19.github.io/raw/main/assets/videos/UnivoteWebDemo.mp4';
                 modalTitle = 'UniVote Web Demo';
@@ -723,15 +840,15 @@
 
             // Show modal with animation
             modal.style.display = 'flex';
-            
+
             // Handle video loading
-            video.addEventListener('loadeddata', function() {
+            video.addEventListener('loadeddata', function () {
                 loading.style.display = 'none';
                 video.style.display = 'block';
                 video.style.animation = 'fadeIn 0.5s ease-in';
             }, { once: true });
 
-            video.addEventListener('error', function() {
+            video.addEventListener('error', function () {
                 loading.innerHTML = '<div style="color: #D04144; text-align: center;"><i class="fas fa-exclamation-triangle" style="font-size: 30px; margin-bottom: 10px;"></i><p>Failed to load video demo</p></div>';
             }, { once: true });
         }
@@ -740,10 +857,10 @@
             const modal = document.getElementById('demoModal');
             const video = document.getElementById('demoVideo');
             const loading = document.getElementById('demoLoading');
-            
+
             // Add closing animation
             modal.style.animation = 'modalFadeOut 0.3s ease-in';
-            
+
             setTimeout(() => {
                 if (video) {
                     video.pause();

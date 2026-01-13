@@ -934,6 +934,9 @@ section#contact {
 }
 
 .project-tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
     background: linear-gradient(135deg, #D04144, #B83638);
     color: #F8F9FA;
     padding: 6px 12px;
@@ -941,8 +944,16 @@ section#contact {
     font-family: 'Roboto Serif', serif;
     font-size: 0.75rem;
     font-weight: 500;
-    display: inline-block;
-    margin-top: 8px;
+    z-index: 20;
+    box-shadow: 0 2px 8px rgba(208, 65, 68, 0.3);
+    transition: all 0.3s ease;
+}
+
+.project-card:hover .project-tag {
+    background: linear-gradient(135deg, #5BCCBF, #4AB3A6);
+    color: #0B0C0D;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(91, 204, 191, 0.4);
 }
 
 .project-tech {

@@ -786,6 +786,7 @@ section#contact {
     gap: 20px;
     max-width: 1400px;
     margin: 0 auto;
+    padding: 0 40px;
 }
 
 .project-card {
@@ -794,92 +795,22 @@ section#contact {
     border-radius: 15px;
     overflow: hidden;
     transition: all 0.3s ease;
-    height: 170px;
+    height: 200px;
     position: relative;
     z-index: 10;
-}
-
-.project-tag {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background: linear-gradient(135deg, #D04144, #B83638);
-    color: #F8F9FA;
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-family: 'Roboto Serif', serif;
-    font-size: 0.75rem;
-    font-weight: 500;
-    z-index: 20;
-    box-shadow: 0 2px 8px rgba(208, 65, 68, 0.3);
-    transition: all 0.3s ease;
-}
-
-.project-card:hover .project-tag {
-    background: linear-gradient(135deg, #5BCCBF, #4AB3A6);
-    color: #0B0C0D;
-    transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(91, 204, 191, 0.4);
-}
-
-.project-card:hover {
-    height: 280px;
-}
-
-.project-content {
-    flex: 1;
-    padding: 10px 30px 30px 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    position: relative;
-    overflow: hidden;
-    margin-top: 35px;
-}
-
-.project-details {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.15s ease;
-    margin-top: 10px;
-}
-
-.project-card:hover .project-details {
-    max-height: 200px;
-}
-
-.project-image {
-    flex: 0 0 320px;
-    background: #333;
-    border-radius: 15px 0 0 15px;
-}
-
-.project-content {
-    flex: 1;
-    padding: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: left;
-}
-
-.project-logo {
-    width: 150px;
-    height: auto;
-    margin-bottom: 7px;
-    object-fit: contain;
 }
 
 .project-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    height: 350px;
 }
 
 .project-image {
-    flex: 0 0 300px;
-    background: #1A1A1A;
+    flex: 0 0 400px;
+    background: #333;
     display: flex;
-    align-items: stretch;
+    align-items: center;
     justify-content: center;
     overflow: hidden;
     position: relative;
@@ -928,43 +859,97 @@ section#contact {
     padding: 30px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
+    overflow: hidden;
 }
 
-.project-content {
-    flex: 1;
-    padding: 10px 30px 30px 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.project-title {
-    font-family: 'Averia Serif Libre', serif;
-    color: #F8F9FA;
-    font-size: 1.8rem;
-    font-weight: 600;
+.project-header {
     margin-bottom: 15px;
-}
-
-.project-title .highlight {
-    color: #D04144;
 }
 
 .project-description {
     font-family: 'Roboto Serif', serif;
     color: #B0B0B0;
     font-size: 0.95rem;
-    line-height: 1.6;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.project-details {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover .project-description {
+    opacity: 1;
+    max-height: 100px;
+}
+
+.project-card:hover .project-details {
+    opacity: 1;
+    max-height: 200px;
+}
+
+.project-logo-title {
+    width: 150px;
+    height: auto;
     margin-bottom: 8px;
-    flex-grow: 1;
+    object-fit: contain;
+}
+
+.project-title-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 8px;
+}
+
+.project-logo {
+    width: 60px;
+    height: auto;
+    object-fit: contain;
+}
+
+.project-title {
+    font-family: 'Averia Serif Libre', serif;
+    color: #F8F9FA;
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.project-subtitle {
+    font-family: 'Roboto Serif', serif;
+    color: #B0B0B0;
+    font-size: 1.1rem;
+    margin: 0;
+    font-weight: 400;
+}
+
+.project-tag {
+    background: linear-gradient(135deg, #D04144, #B83638);
+    color: #F8F9FA;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-family: 'Roboto Serif', serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    display: inline-block;
+    margin-top: 8px;
 }
 
 .project-tech {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    margin-bottom: 8px;
+    margin-bottom: 20px;
 }
 
 .tech-tag {
@@ -972,74 +957,63 @@ section#contact {
     color: #F8F9FA;
     padding: 6px 12px;
     border-radius: 20px;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     font-family: 'Roboto Serif', serif;
     font-weight: 500;
-}
-
-.easecare-header {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 7px;
-}
-
-.easecare-logo {
-    width: 80px;
-    height: auto;
-    margin-bottom: 0;
-    object-fit: contain;
-}
-
-.easecare-title {
-    font-family: 'Averia Serif Libre', serif;
-    color: #F8F9FA;
-    font-size: 1.8rem;
-    font-weight: 600;
-    margin: 0;
-}
-
-.care-text {
-    color: #E87400;
 }
 
 .project-links {
     display: flex;
     gap: 15px;
+    align-items: center;
 }
 
 .btn-demo {
     background: #5BCCBF;
     color: #0B0C0D;
-    padding: 8px 16px;
+    padding: 10px 20px;
     border-radius: 8px;
     text-decoration: none;
     font-family: 'Roboto Serif', serif;
     font-weight: 500;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
 }
 
 .btn-demo:hover {
     background: #4AB3A6;
     color: #0B0C0D;
     text-decoration: none;
+    transform: translateY(-2px);
 }
 
 .btn-source {
     background: #F9F8FA;
     color: #0B0C0D;
-    padding: 8px 16px;
+    padding: 10px 20px;
     border: 1px solid #555;
     border-radius: 8px;
     text-decoration: none;
     font-family: 'Roboto Serif', serif;
     font-weight: 500;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
     gap: 8px;
+}
+
+.btn-source:hover {
+    background: #E0E0E0;
+    color: #0B0C0D;
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+
+.btn-source i {
+    font-size: 16px;
 }
 
 @media (max-width: 768px) {
@@ -1049,11 +1023,13 @@ section#contact {
     
     .project-card {
         flex-direction: column;
-        min-height: auto;
+        height: auto;
+        min-height: 400px;
     }
     
     .project-image {
         flex: 0 0 200px;
+        width: 100%;
     }
     
     .project-content {
@@ -1061,7 +1037,11 @@ section#contact {
     }
     
     .project-title {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
+    }
+    
+    .project-subtitle {
+        font-size: 1rem;
     }
     
     .project-links {
@@ -1073,6 +1053,7 @@ section#contact {
     .btn-source {
         text-align: center;
         justify-content: center;
+        width: 100%;
     }
 }
 

@@ -394,6 +394,93 @@ section#contact {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23D04144'%3e%3cpath d='m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z'/%3e%3c/svg%3e");
 }
 
+/* Education Cards */
+.education-cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.education-card {
+    background: #0B0C0D;
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 10;
+}
+
+.education-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(91, 204, 191, 0.3),
+                0 0 40px rgba(91, 204, 191, 0.1),
+                0 0 60px rgba(91, 204, 191, 0.05);
+}
+
+.education-logo {
+    flex-shrink: 0;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.education-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+
+.education-content {
+    flex: 1;
+}
+
+.education-content h3 {
+    font-family: 'Averia Serif Libre', serif;
+    color: #F8F9FA;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+}
+
+.education-content h4 {
+    font-family: 'Roboto Serif', serif;
+    color: #C2C6C9;
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin: 0 0 5px 0;
+}
+
+.education-content p {
+    font-family: 'Roboto Serif', serif;
+    color: #C2C6C9;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.education-year {
+    flex-shrink: 0;
+}
+
+.education-year span {
+    display: inline-block;
+    background: transparent;
+    border: 2px solid #F8F9FA;
+    border-radius: 25px;
+    padding: 10px 25px;
+    font-family: 'Roboto Serif', serif;
+    color: #F8F9FA;
+    font-size: 1rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
 /* Skills Section */
 .skills-section {
     background-color: #0B0C0D;

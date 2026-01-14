@@ -183,6 +183,23 @@ section#contact {
     transition: all 0.3s ease;
     display: inline-block;
     border: none !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.hero-section .btn:hover::before {
+    left: 100%;
 }
 
 .hero-section .btn-outline {
@@ -194,6 +211,7 @@ section#contact {
     background: #5BCCBF !important;
     color: #0B0C0D!important;
     text-decoration: none;
+    box-shadow: 0 5px 15px rgba(91, 204, 191, 0.4);
 }
 
 .hero-section .btn-filled {
@@ -222,6 +240,7 @@ section#contact {
     background: #5BCCBF !important;
     color: #0B0C0D !important;
     text-decoration: none;
+    box-shadow: 0 5px 15px rgba(91, 204, 191, 0.4);
 }
 
 .description {
@@ -798,11 +817,29 @@ section#contact {
     background-color: #5BCCBF !important;
     transition: all 0.3s ease;
     border: none !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-section .btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.about-section .btn:hover::before {
+    left: 100%;
 }
 
 .about-section .btn:hover {
     background-color: #D04144 !important;
     color: #F9F8FA !important;
+    box-shadow: 0 5px 15px rgba(208, 65, 68, 0.4);
 }
 
 .card {
@@ -1081,6 +1118,23 @@ section#contact {
     transition: all 0.3s ease;
     border: none;
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-demo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn-demo:hover::before {
+    left: 100%;
 }
 
 .btn-demo:hover {
@@ -1088,6 +1142,7 @@ section#contact {
     color: #0B0C0D;
     text-decoration: none;
     transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(91, 204, 191, 0.4);
 }
 
 .btn-source {
@@ -1104,6 +1159,23 @@ section#contact {
     display: flex;
     align-items: center;
     gap: 8px;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-source::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn-source:hover::before {
+    left: 100%;
 }
 
 .btn-source:hover {
@@ -1111,6 +1183,7 @@ section#contact {
     color: #0B0C0D;
     text-decoration: none;
     transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .btn-source i {

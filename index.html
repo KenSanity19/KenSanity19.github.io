@@ -547,10 +547,16 @@
                             <h3>Send me a message</h3>
                             <p>I'd love to hear about your project or just say hello!</p>
                         </div>
-                        <form class="contact-form" action="https://formsubmit.co/carreon.kentphillip18@gmail.com" method="POST">
+                        <div id="successMessage" style="display: none; background: #5BCCBF; color: #0B0C0D; padding: 20px; border-radius: 10px; margin-bottom: 20px; text-align: center; font-family: 'Roboto Serif', serif;">
+                            <i class="fas fa-check-circle" style="font-size: 40px; margin-bottom: 10px;"></i>
+                            <h3 style="margin: 10px 0;">Message Sent Successfully!</h3>
+                            <p style="margin: 0;">Thank you for reaching out. I'll get back to you soon!</p>
+                        </div>
+                        <form class="contact-form" id="contactForm" action="https://formsubmit.co/carreon.kentphillip18@gmail.com" method="POST">
                             <input type="hidden" name="_subject" value="New message from your portfolio!">
                             <input type="hidden" name="_captcha" value="false">
                             <input type="hidden" name="_template" value="table">
+                            <input type="hidden" name="_next" value="https://kensanity19.github.io/?success=true#contact">
                             <div class="form-group">
                                 <label for="name" class="form-label">Full Name</label>
                                 <input type="text" class="form-input" id="name" name="name" placeholder="Enter your name" required>
@@ -953,6 +959,33 @@
                 modal.style.display = 'none';
             }
         }
+
+        // Check for success message on page load
+        window.addEventListener('load', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('success') === 'true') {
+                const successMessage = document.getElementById('successMessage');
+                const contactForm = document.getElementById('contactForm');
+                
+                if (successMessage && contactForm) {
+                    successMessage.style.display = 'block';
+                    contactForm.reset();
+                    
+                    // Scroll to contact section
+                    setTimeout(() => {
+                        const contactSection = document.getElementById('contact');
+                        if (contactSection) {
+                            contactSection.scrollIntoView({ behavior: 'smooth' });
+                        }
+                    }, 100);
+                    
+                    // Clean URL
+                    setTimeout(() => {
+                        window.history.replaceState({}, document.title, window.location.pathname + '#contact');
+                    }, 1000);
+                }
+            }
+        });
     </script>
 </body>
 

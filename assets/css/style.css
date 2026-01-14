@@ -102,8 +102,8 @@ section {
 
 /* Projects Section */
 section#projects {
-    min-height: 130vh;
-    max-height: 130vh;
+    min-height: 135vh;
+    max-height: 135vh;
 }
 
 /* Contact Section */
@@ -320,6 +320,7 @@ section#contact {
     font-size: 4rem;
     font-weight: 700;
     margin-bottom: 2rem;
+    text-align: center;
 }
 
 .about-section .card h3, .about-section .card h4, .about-section .card h5 {
@@ -418,6 +419,8 @@ section#contact {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 .education-card {

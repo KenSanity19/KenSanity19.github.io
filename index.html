@@ -72,7 +72,7 @@
     <!-- ABOUT SECTION -->
     <section id="about" class="about-section">
         <div class="container-fluid h-100">
-            <div id="aboutCarousel" class="carousel slide h-100" data-bs-ride="carousel">
+            <div id="aboutCarousel" class="carousel slide h-100" data-bs-ride="false" data-bs-interval="false">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="0" class="active"></button>
                     <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="1"></button>
@@ -767,6 +767,16 @@
             setTimeout(typeWriter, 1000);
             setTimeout(typeSubtitle, 2000);
         });
+        // Reset carousel to first slide when clicking about link
+        const aboutCarousel = document.getElementById('aboutCarousel');
+        const carousel = new bootstrap.Carousel(aboutCarousel, { interval: false });
+        
+        document.querySelectorAll('a[href="#about"]').forEach(link => {
+            link.addEventListener('click', () => {
+                setTimeout(() => carousel.to(0), 100);
+            });
+        });
+
         // Active nav link animation
         window.addEventListener('scroll', () => {
             const sections = document.querySelectorAll('section');

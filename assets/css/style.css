@@ -102,8 +102,8 @@ section {
 
 /* Projects Section */
 section#projects {
-    min-height: 150vh;
-    max-height: 150vh;
+    min-height: 130vh;
+    max-height: 130vh;
 }
 
 /* Contact Section */
@@ -878,11 +878,11 @@ section#contact {
 
 .project-card {
     display: flex;
-    background: #1A1A1A;
+    background: #0B0C0D;
     border-radius: 15px;
     overflow: hidden;
     transition: all 0.3s ease;
-    height: 200px;
+    height: 185px;
     position: relative;
     z-index: 10;
 }
@@ -890,7 +890,7 @@ section#contact {
 .project-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    height: 350px;
+    height: 305px;
 }
 
 .project-image {
@@ -948,6 +948,7 @@ section#contact {
     flex-direction: column;
     justify-content: flex-start;
     overflow: hidden;
+    padding-bottom: 20px;
 }
 
 .project-header {
@@ -959,7 +960,7 @@ section#contact {
     color: #B0B0B0;
     font-size: 0.95rem;
     line-height: 1.4;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     opacity: 0;
     max-height: 0;
     overflow: hidden;
@@ -971,6 +972,7 @@ section#contact {
     max-height: 0;
     overflow: hidden;
     transition: all 0.3s ease;
+    margin: 0;
 }
 
 .project-card:hover .project-description {
@@ -1047,7 +1049,7 @@ section#contact {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .tech-tag {
@@ -1064,6 +1066,7 @@ section#contact {
     display: flex;
     gap: 15px;
     align-items: center;
+    margin: 0;
 }
 
 .btn-demo {

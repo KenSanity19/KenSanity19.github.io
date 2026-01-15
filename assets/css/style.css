@@ -1200,14 +1200,18 @@ section#contact {
     
     .project-card {
         flex-direction: column;
-        height: auto;
+        height: auto !important;
         min-height: 400px;
+    }
+    
+    .project-card:hover {
+        height: auto !important;
     }
     
     .project-card .project-description,
     .project-card .project-details {
-        opacity: 1;
-        max-height: none;
+        opacity: 1 !important;
+        max-height: none !important;
     }
     
     .project-image {
@@ -1941,8 +1945,22 @@ section#contact {
     }
     
     /* About Section Carousel */
+    .about-section,
+    .about-section .carousel,
+    .about-section .carousel-inner {
+        overflow-y: auto;
+        height: auto;
+    }
+    
+    .about-section .carousel-item {
+        height: auto;
+        min-height: auto;
+    }
+    
     .about-section .d-flex {
         padding: 20px !important;
+        height: auto;
+        min-height: auto;
     }
     
     .about-section .carousel-item .row {
@@ -1979,8 +1997,19 @@ section#contact {
         margin-bottom: 15px;
     }
     
+    .about-section .d-flex.justify-content-end {
+        justify-content: center !important;
+        margin-top: 20px;
+    }
+    
+    .about-section .btn {
+        width: auto;
+        padding: 12px 30px !important;
+    }
+    
     .what-i-do-card {
         padding: 20px !important;
+        min-height: auto !important;
     }
     
     .what-i-do-card h4 {

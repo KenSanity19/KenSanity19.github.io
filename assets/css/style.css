@@ -1204,6 +1204,12 @@ section#contact {
         min-height: 400px;
     }
     
+    .project-card .project-description,
+    .project-card .project-details {
+        opacity: 1;
+        max-height: none;
+    }
+    
     .project-image {
         flex: 0 0 200px;
         width: 100%;
@@ -1907,57 +1913,105 @@ section#contact {
         text-align: center;
     }
     
+    .image-content {
+        margin-left: 0;
+    }
+    
     .profile-image {
-        width: 250px;
-        height: 250px;
+        width: 100%;
+        max-width: 350px;
+        height: 350px;
+        margin: 0 auto;
     }
     
     .ellipse-bg {
-        width: 200px;
-        height: 200px;
-        right: 25px;
+        width: 280px;
+        height: 280px;
+        right: 50%;
+        transform: translateX(50%);
+        bottom: 20px;
     }
     
     .profile-photo {
-        width: 280px;
-        bottom: 0;
-        left: 0;
+        width: 300px;
+        height: auto;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
     }
     
     /* About Section Carousel */
+    .about-section .d-flex {
+        padding: 20px !important;
+    }
+    
     .about-section .carousel-item .row {
-        flex-direction: row !important;
-        flex-wrap: wrap;
+        flex-direction: column !important;
+        gap: 20px;
     }
     
-    .about-section .carousel-item .col-md-6 {
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-    
-    .about-section .carousel-item .col-md-8 {
-        flex: 0 0 100%;
-        max-width: 100%;
-        order: 2;
-    }
-    
+    .about-section .carousel-item .col-md-6,
+    .about-section .carousel-item .col-md-8,
     .about-section .carousel-item .col-md-4 {
         flex: 0 0 100%;
         max-width: 100%;
-        order: 1;
+        padding: 0 15px;
     }
     
     .about-section h1 {
-        font-size: 1.8rem;
+        font-size: 2rem;
         margin-bottom: 1.5rem;
-        padding: 0 20px;
+        text-align: center;
     }
     
     .about-section p {
-        font-size: 0.9rem;
-        margin-bottom: 1rem;
-        padding: 0 20px;
-        line-height: 1.5;
+        font-size: 1rem;
+        margin-bottom: 1.2rem;
+        line-height: 1.6;
+        text-align: left;
+    }
+    
+    .about-section .row.g-4 {
+        gap: 15px !important;
+    }
+    
+    .about-section .col-md-4 {
+        margin-bottom: 15px;
+    }
+    
+    .what-i-do-card {
+        padding: 20px !important;
+    }
+    
+    .what-i-do-card h4 {
+        font-size: 20px !important;
+    }
+    
+    .what-i-do-card p {
+        font-size: 16px !important;
+    }
+    
+    .education-cards-container {
+        gap: 15px;
+    }
+    
+    .education-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px !important;
+    }
+    
+    .education-logo {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .education-content h3 {
+        font-size: 1.2rem !important;
+    }
+    
+    .education-content h4 {
+        font-size: 1rem !important;
     }
     
     .about-image-container {
@@ -2038,20 +2092,25 @@ section#contact {
     }
     
     .profile-image {
-        width: 200px;
-        height: 200px;
+        width: 100%;
+        max-width: 280px;
+        height: 280px;
     }
     
     .ellipse-bg {
-        width: 160px;
-        height: 160px;
-        right: 20px;
+        width: 220px;
+        height: 220px;
+        right: 50%;
+        transform: translateX(50%);
+        bottom: 15px;
     }
     
     .profile-photo {
-        width: 220px;
-        bottom: 0;
-        left: 0;
+        width: 240px;
+        height: auto;
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
     }
     
     .about-section .carousel-item .row {
